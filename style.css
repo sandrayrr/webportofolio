@@ -1,0 +1,616 @@
+:root {
+  --primary: #3b82f6;
+  --bg: #f9fafb;
+  --transition: all 0.4s ease;
+}
+
+body {
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+  transition: background-color 0.5s ease;
+}
+
+.navbar {
+  background-color: white !important;
+  transition: var(--transition);
+}
+
+.nav-link {
+  transition: var(--transition);
+}
+.nav-link:hover {
+  color: var(--primary) !important;
+  transform: scale(1.05);
+}
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #dbeafe, #ffffff);
+  padding-top: 100px;
+  transition: background 1s ease;
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+.fade-in-delay {
+  opacity: 0;
+  animation: fadeIn 2s 0.5s forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pulse-btn {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(59,130,246,0.4); }
+  50% { box-shadow: 0 0 0 15px rgba(59,130,246,0); }
+}
+
+.skill-box {
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.skill-box:hover {
+  transform: translateY(-8px) scale(1.05);
+  background: var(--primary);
+  color: white;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(59,130,246,0.4);
+}
+
+.card-animate {
+  transition: var(--transition);
+}
+.card-animate:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(59,130,246,0.3);
+}
+.timeline {
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline-line {
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #3b82f6, #06b6d4);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  animation: growLine 2s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes growLine {
+  0% { height: 0; opacity: 0; }
+  100% { height: 100%; opacity: 1; }
+}
+
+.timeline-item {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateY(-6px);
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  background: #3b82f6;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(59,130,246,0.6);
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0% { box-shadow: 0 0 0 0 rgba(59,130,246,0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(59,130,246,0); }
+  100% { box-shadow: 0 0 0 0 rgba(59,130,246,0); }
+}
+
+/* Efek hover glowing card */
+.hover-glow {
+  transition: all 0.3s ease;
+}
+.hover-glow:hover {
+  box-shadow: 0 8px 20px rgba(6,182,212,0.25);
+  transform: scale(1.03);
+}
+
+/* AOS fade control */
+[data-aos="fade-right"], [data-aos="fade-left"] {
+  transition: all 0.8s ease-in-out;
+}
+.fade-in-list li {
+  opacity: 0;
+  animation: fadeInList 1s forwards;
+}
+.fade-in-list li:nth-child(1) { animation-delay: 0.3s; }
+.fade-in-list li:nth-child(2) { animation-delay: 0.6s; }
+.fade-in-list li:nth-child(3) { animation-delay: 0.9s; }
+
+@keyframes fadeInList {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.btn-download {
+  border-width: 2px;
+  transition: all 0.4s ease;
+}
+
+.btn-download:hover {
+  background: var(--primary);
+  color: white !important;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(59,130,246,0.3);
+}
+.hero {
+  background-color: #f0f9ff;
+  min-height: 100vh;
+}
+
+.floating {
+  animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.fade-in-delay {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.4s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pulse-btn {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 99, 235, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+}
+#about {
+  background-color: #f0f9ff;
+}
+
+#about h2 {
+  font-weight: 700;
+}
+
+#about p {
+  line-height: 1.8;
+}
+
+#about img {
+  transition: transform 0.4s ease;
+}
+
+#about img:hover {
+  transform: scale(1.05);
+}
+#typing-name::after,
+#typing-role::after {
+  content: "|";
+  animation: blink 1s infinite;
+  color: #06b6d4;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.1%, 100% { opacity: 0; }
+}
+/* Foto profil tanpa card */
+.profile-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Gaya foto elegan tanpa kotak */
+.profile-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: all 0.4s ease;
+}
+
+/* Efek hover halus */
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+
+/* Efek animasi floating */
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+/* === Floating Side Navbar === */
+.side-navbar {
+  position: fixed;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  padding: 10px 6px;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeInRight 1s ease forwards;
+}
+
+/* Smooth muncul dari kanan */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate(30px, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+.side-navbar .nav-link {
+  position: relative;
+  color: #0d6efd;
+  font-size: 1.3rem;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* Hover utama */
+.side-navbar .nav-link:hover,
+.side-navbar .nav-link.active {
+  background-color: #06b6d4;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+}
+
+/* Label muncul di hover */
+.side-navbar .nav-link::after {
+  content: attr(data-label);
+  position: absolute;
+  right: 130%;
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
+  background: rgba(6, 182, 212, 0.95);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Panah kecil */
+.side-navbar .nav-link::before {
+  content: "";
+  position: absolute;
+  right: 120%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-left-color: rgba(6, 182, 212, 0.95);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Saat hover tampil teks */
+.side-navbar .nav-link:hover::after,
+.side-navbar .nav-link:hover::before {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* Mobile: hide sidebar */
+@media (max-width: 768px) {
+  .side-navbar {
+    display: none;
+  }
+}
+.contact-icon {
+  display: inline-block;
+  background: white;
+  border-radius: 20px;
+  padding: 30px 20px;
+  transition: all 0.4s ease;
+  text-decoration: none;
+  color: #1e293b;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.contact-icon i {
+  font-size: 45px;
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.contact-icon:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(6,182,212,0.3);
+}
+
+.contact-icon:hover i {
+  transform: scale(1.2);
+  color: #06b6d4;
+}
+
+.contact-icon h6 {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #0f172a;
+}
+.hobby-card {
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hobby-card img {
+  transition: transform 0.6s ease;
+}
+
+.hobby-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(6,182,212,0.3);
+}
+
+.hobby-card:hover img {
+  transform: scale(1.1);
+}
+
+/* === Foto Profil Artistik === */
+.photo-frame {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-photo {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border: 5px solid #06b6d4;
+  z-index: 2;
+  transition: transform 0.5s ease-in-out;
+}
+
+.profile-photo:hover {
+  transform: scale(1.1) rotate(2deg);
+}
+
+/* Cincin berputar */
+.photo-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 280px;
+  height: 280px;
+  border: 2px dashed #3b82f6;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: spinRing 8s linear infinite;
+  z-index: 1;
+}
+
+@keyframes spinRing {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Cahaya berdenyut */
+.photo-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(6,182,212,0.25), transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulseGlow 2.5s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+  50% { transform: translate(-50%, -50%) scale(1.15); opacity: 0.4; }
+}
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(120deg, #e0f2fe, #bae6fd, #93c5fd);
+  background-size: 400% 400%;
+  animation: gradientMove 20s ease infinite;
+}
+/* ===============================
+   ✅ Responsive / Mobile Friendly Fix
+   =============================== */
+@media (max-width: 992px) {
+  .hero {
+    padding-top: 80px;
+    text-align: center;
+  }
+
+  .profile-img,
+  .profile-photo {
+    width: 160px;
+    height: 160px;
+  }
+
+  .photo-ring {
+    width: 200px;
+    height: 200px;
+  }
+
+  .photo-glow {
+    width: 180px;
+    height: 180px;
+  }
+
+  .timeline-line {
+    left: 4%;
+    transform: none;
+  }
+
+  .timeline-item {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 15px;
+  }
+
+  h1, h2 {
+    font-size: 1.6rem !important;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .skill-box {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .contact-icon {
+    display: block;
+    margin: 15px auto;
+    padding: 20px;
+  }
+
+  .profile-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .photo-ring {
+    width: 180px;
+    height: 180px;
+  }
+
+  .photo-glow {
+    width: 160px;
+    height: 160px;
+  }
+
+  .side-navbar {
+    display: none; /* hide sidebar on mobile */
+  }
+
+  .hobby-card img {
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .timeline {
+    padding-left: 10px;
+  }
+
+  .timeline-line {
+    left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .hero {
+    padding-top: 60px;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .photo-ring {
+    width: 150px;
+    height: 150px;
+  }
+
+  .photo-glow {
+    width: 140px;
+    height: 140px;
+  }
+
+  .skill-box {
+    font-size: 0.9rem;
+  }
+
+  .contact-icon i {
+    font-size: 36px;
+  }
+
+  .contact-icon h6 {
+    font-size: 0.9rem;
+  }
+
+  .timeline-item {
+    font-size: 0.9rem;
+  }
+}
