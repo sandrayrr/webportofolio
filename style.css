@@ -396,25 +396,86 @@ body {
   font-weight: 600;
   color: #0f172a;
 }
-.hobby-card {
-  overflow: hidden;
-  border-radius: 15px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
+/* ✅ Perbaikan khusus bagian Hobi */
+  .hobby-card {
+    margin-bottom: 20px;
+  }
 
-.hobby-card img {
-  transition: transform 0.6s ease;
-}
+  .hobby-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 
-.hobby-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(6,182,212,0.3);
-}
+  .hobby-section {
+    text-align: center;
+    padding: 30px 15px;
+  }
 
-.hobby-card:hover img {
-  transform: scale(1.1);
-}
+  .hobby-section .row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
+  .timeline {
+    padding-left: 10px;
+  }
+
+  .timeline-line {
+    left: 10px;
+  }
+/* HP kecil */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .hero {
+    padding-top: 60px;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .photo-ring {
+    width: 150px;
+    height: 150px;
+  }
+
+  .photo-glow {
+    width: 140px;
+    height: 140px;
+  }
+
+  .skill-box {
+    font-size: 0.9rem;
+  }
+
+  .contact-icon i {
+    font-size: 36px;
+  }
+
+  .contact-icon h6 {
+    font-size: 0.9rem;
+  }
+
+  .timeline-item {
+    font-size: 0.9rem;
+  }
+
+  /* ✅ Hobi lebih proporsional di HP */
+  .hobby-card img {
+    height: 180px;
+  }
+
+  .hobby-card h5 {
+    font-size: 1rem;
+  }
+}
 /* === Foto Profil Artistik === */
 .photo-frame {
   position: relative;
@@ -482,87 +543,27 @@ body {
   background-size: 400% 400%;
   animation: gradientMove 20s ease infinite;
 }
-/* ===============================
-   ✅ Responsive / Mobile Friendly Fix
-   =============================== */
-@media (max-width: 992px) {
-  .hero {
-    padding-top: 80px;
-    text-align: center;
-  }
-
-  .profile-img,
-  .profile-photo {
-    width: 160px;
-    height: 160px;
-  }
-
-  .photo-ring {
-    width: 200px;
-    height: 200px;
-  }
-
-  .photo-glow {
-    width: 180px;
-    height: 180px;
-  }
-
-  .timeline-line {
-    left: 4%;
-    transform: none;
-  }
-
-  .timeline-item {
-    margin-left: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 60px 15px;
-  }
-
-  h1, h2 {
-    font-size: 1.6rem !important;
-  }
-
-  p {
-    font-size: 0.95rem;
-  }
-
-  .skill-box {
-    padding: 15px;
-    margin-bottom: 15px;
-  }
-
-  .contact-icon {
-    display: block;
-    margin: 15px auto;
-    padding: 20px;
-  }
-
-  .profile-photo {
-    width: 140px;
-    height: 140px;
-  }
-
-  .photo-ring {
-    width: 180px;
-    height: 180px;
-  }
-
-  .photo-glow {
-    width: 160px;
-    height: 160px;
-  }
-
-  .side-navbar {
-    display: none; /* hide sidebar on mobile */
+  /* ✅ Perbaikan khusus bagian Hobi */
+  .hobby-card {
+    margin-bottom: 20px;
   }
 
   .hobby-card img {
-    height: 180px;
+    width: 100%;
+    height: 200px;
     object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .hobby-section {
+    text-align: center;
+    padding: 30px 15px;
+  }
+
+  .hobby-section .row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .timeline {
@@ -572,8 +573,9 @@ body {
   .timeline-line {
     left: 10px;
   }
-}
 
+
+/* HP kecil */
 @media (max-width: 480px) {
   body {
     font-size: 14px;
@@ -613,4 +615,18 @@ body {
   .timeline-item {
     font-size: 0.9rem;
   }
+
+  /* ✅ Hobi lebih proporsional di HP */
+  .hobby-card img {
+    height: 180px;
+  }
+
+  .hobby-card h5 {
+    font-size: 1rem;
+  }
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
